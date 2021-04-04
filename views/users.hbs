@@ -1,0 +1,78 @@
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h1>{{title}} C.R.U.D.</h1> <!-- Create, Read, Update, Delete ( Altas, Bajas, Modificaciones, Lectura ) -->
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-7">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each users}}
+                    <tr>
+                        <th scope="row">{{id_user}}</th>
+                        <td>{{email}}</td>
+                        <td>{{password}}</td>
+                        <td>{{role}}</td>
+                        <td>
+                            <a href="/users/{{id_user}}" class="btn btn-info">Seleccionar</a>
+                            <button type="button" onclick="deleteUser({{id_user}})" class="btn btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-5">
+            <form action="/users/new" method="POST">
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label>Seleccione el role</label>
+                    <select class="form-control" name="role">
+                        {{#each roles}}
+                            <option value="{{id_role}}">{{detail}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Crear usuario</button>
+            </form>
+            {{#if user}}
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                        <input type="email" class="form-control" value="{{user.email}}" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" value="{{user.password}}" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label>Seleccione el role</label>
+                        <select class="form-control" id="role">
+                            <option value="{{user.role}}" selected="selected">{{user.detail}}</option>
+                            {{#each roles}}
+                                <option value="{{id_role}}">{{detail}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <button class="btn btn-primary"onclick="updateUser({{user.id_user}})">Actualizar</button>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

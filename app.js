@@ -11,6 +11,7 @@ dotenv.config();
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const aboutRouter = require("./routes/about");
+const skillsRouter = require("./routes/skills");
 const contactRouter = require("./routes/contact");
 const app = express();
 
@@ -37,6 +38,7 @@ app.use("/images", express.static(__dirname + "/images"));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/skills", skillsRouter);
 app.use("/about", aboutRouter);
 app.use("/contact", contactRouter);
 

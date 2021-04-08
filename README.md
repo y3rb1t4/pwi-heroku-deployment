@@ -1,6 +1,6 @@
 # Programador Web Inicial – Frontend Developer
 
-##Objetivos Cumplidos:
+## Objetivos Cumplidos:
 
 ## Agradecimientos
 
@@ -15,7 +15,10 @@ Al Profesor Matias Suez y a la Comunidad UTN-FRBA
     <li>UX/UI</li>
     <li>JavaScript</li>
     <li>JQUERY</li>
+    <li>Handlebars</li>
     <li>Web Project</li>
+    <li>Git</li>
+    <li>Deploy Heroku</li>
 </ul>
 
 ## Duracion
@@ -25,9 +28,11 @@ Al Profesor Matias Suez y a la Comunidad UTN-FRBA
 
 ## Primeros pasos
 
-<p>Asegurate de tener instalado node, npm o yarn. Luego clona el repositorio usa la terminal para navegar a la carpeta que quieras, instalá los modulos e inicia react. </p>
+<p>Asegurate de tener instalado node, npm o yarn. Luego clona el repositorio usa la terminal para navegar a la carpeta que quieras, instalá los modulos e inicia node. </p>
 
+```bash
 git clone https://github.com/y3rb1t4/pwi-heroku-deployment.git
+```
 
 ```bash
 cd [folder]/pwi-heroku-deployment
@@ -37,7 +42,7 @@ cd [folder]/pwi-heroku-deployment
 npm i
 ```
 
-```
+```bash
 nodemon npm start
 ```
 

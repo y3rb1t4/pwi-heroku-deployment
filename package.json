@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "run": "node ./bin/www"
+    "start": "NODE_ENV=production node ./bin/www",
+    "dev": "NODE_ENV=development npx nodemon node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -21,6 +21,7 @@
     "nodemailer": "^6.5.0",
     "nodemon": "^2.0.7",
     "normalize.css": "^8.0.1",
+    "particles.js": "^2.0.0",
     "sha1": "^1.1.1",
     "util": "^0.12.3",
     "uuid": "^8.3.2"

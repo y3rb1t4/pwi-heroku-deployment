@@ -72,7 +72,6 @@ const deleteUser = async (req, res, next) => {
       console.log(result);
       const users = await model.getAllUsers();
       const roles = await model.getRoles();
-
       res.json({ id });
     } else {
       res.render("error");

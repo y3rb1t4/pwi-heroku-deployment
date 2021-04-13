@@ -4,7 +4,7 @@
 
 ## Agradecimientos
 
-Al Profesor Matias Suez y a la Comunidad UTN-FRBA
+Al Profesor Matias Suez ( https://github.com/matisuez )y a la Comunidad UTN-FRBA
 
 ## Tecnologías
 
